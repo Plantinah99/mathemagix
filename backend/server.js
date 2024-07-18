@@ -1,19 +1,20 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const cors = require('cors');
 const { getRandomQuestion } = require('./questions');
 
 const app = express();
-const port = process.env.PORT || 3000;
-
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/question', (req, res) => {
+const router = express.Router();
+
+router.get('/question', (req, res) => {
   const question = getRandomQuestion();
   res.json(question);
 });
 
-app.post('/api/check', (req, res) => {
+router.post('/check', (req, res) => {
   const { id, answer } = req.body;
   const question = getRandomQuestion(id);
   
@@ -32,6 +33,6 @@ app.post('/api/check', (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+app.use('/.netlify/functions/server', router);
+
+module.exports.handler = serverless(app);
