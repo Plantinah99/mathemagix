@@ -1,19 +1,10 @@
 {
   "name": "mathemagix",
   "version": "1.0.0",
-  "description": "A basic arithmetic math MCQ app",
-  "main": "backend/server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "dev": "nodemon backend/server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "serverless-http": "^3.2.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -25,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Plantinah99/mathemagix/issues"
   },
-  "homepage": "https://github.com/Plantinah99/mathemagix#readme"
+  "homepage": "https://github.com/Plantinah99/mathemagix#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  }
 }

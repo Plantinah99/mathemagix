@@ -1,0 +1,14 @@
+[
+    {
+        "question": "What is 2 + 2?",
+        "options": ["3", "4", "5"],
+        "correctAnswer": "4"
+    },
+    {
+        "question": "What is 3 * 5?",
+        "options": ["12", "15", "18"],
+        "correctAnswer": "15"
+    }
+    // Add more questions as needed
+]
+
